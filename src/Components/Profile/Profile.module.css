@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile {
+  margin: auto;
+  margin-top: 10px;
+  max-width: 350px;
+  background-color: #eee;
+  padding: 50px;
+}
+
+.description {
+  background-color: white;
+  padding: 30px 60px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.tag,
+.location,
+.label {
+  font-size: 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.stats,
+.stats li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.stats li {
+  background-color: #e4ecee;
+  width: 33%;
+  padding: 10px 0;
+  border-top: 1px solid black;
+}
+
+.profile li:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.label {
+  width: 100%;
+}
