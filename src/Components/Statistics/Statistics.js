@@ -35,8 +35,4 @@ Statistics.propTypes = {
   ).isRequired,
 };
 
-Statistics.defaultProps = {
-  title: "",
-};
-
 export default Statistics;
