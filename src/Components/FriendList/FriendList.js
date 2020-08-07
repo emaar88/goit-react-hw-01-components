@@ -1,7 +1,6 @@
 import React from "react";
 import FriendListItem from "./../FriendListItem/FriendListItem";
 import PropTypes from "prop-types";
-import friends from "./../../db/friends.json";
 import { FriendsList } from "./FriendList.styled";
 
 const FriendList = ({ friends }) => {
@@ -17,6 +16,17 @@ const FriendList = ({ friends }) => {
       ))}
     </FriendsList>
   );
+};
+
+FriendList.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default FriendList;
