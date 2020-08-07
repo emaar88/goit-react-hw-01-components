@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import transactions from "./../../db/transactions.json";
 import "./TransactionHistory.scss";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ transaction }) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -27,4 +27,13 @@ const TransactionHistory = () => {
   );
 };
 
+TransactionHistory.propTypes = {
+  id: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+};
 export default TransactionHistory;
